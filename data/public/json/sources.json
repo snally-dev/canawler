@@ -40,62 +40,86 @@
       "nps_towpath_reference"
     ]
   },
-  "schema_version": 1,
+  "schema_version": 2,
   "sources": [
     {
+      "checked_at": "2026-10-01",
       "description": "Access-point names, mile ranges, and coordinates.",
       "id": "co_canal_association_access_points",
       "name": "C&O Canal Association",
       "organization": "C&O Canal Association",
+      "published_at": null,
+      "retrieved_at": null,
       "url": "https://candocanal.org/access/"
     },
     {
+      "checked_at": "2026-10-01",
       "description": "Normalized aqueduct names and reference mileposts.",
       "id": "co_canal_trust_aqueducts",
       "name": "C&O Canal Trust Aqueduct Guide",
       "organization": "C&O Canal Trust",
+      "published_at": null,
+      "retrieved_at": null,
       "url": "https://www.canaltrust.org/plan/explore-your-canal/"
     },
     {
+      "checked_at": "2026-10-01",
       "description": "Practical lift-lock mileposts and common names.",
       "id": "co_canal_trust_locks",
       "name": "C&O Canal Trust",
       "organization": "C&O Canal Trust",
+      "published_at": null,
+      "retrieved_at": null,
       "url": "https://www.canaltrust.org/pyvactivities/locks/"
     },
     {
+      "checked_at": "2026-10-01",
       "description": "Current official campground types and mileposts, approved 2026-09-10.",
       "id": "nps_2026_superintendents_compendium",
       "name": "National Park Service 2026 Superintendent's Compendium",
       "organization": "National Park Service",
+      "published_at": "2026-09-10",
+      "retrieved_at": null,
       "url": "https://home.nps.gov/choh/learn/management/superintendent-s-compendium.htm"
     },
     {
+      "checked_at": "2026-10-01",
       "description": "Authority for the lift-lock count and numbering.",
       "id": "nps_lift_locks",
       "name": "National Park Service Lift Locks",
       "organization": "National Park Service",
+      "published_at": null,
+      "retrieved_at": null,
       "url": "https://www.nps.gov/choh/learn/historyculture/lift-locks.htm"
     },
     {
+      "checked_at": "2026-10-01",
       "description": "Recreation locations and listed visitor amenities.",
       "id": "nps_recreation_guide",
       "name": "National Park Service C&O Canal Recreational Guide by Milepost",
       "organization": "National Park Service",
+      "published_at": null,
+      "retrieved_at": null,
       "url": "https://www.nps.gov/common/uploads/sortable_dataset/choh/E3324057-FAAC-0D9B-C75464422AFC4A4C/choh-CHOHRecreationalGuidebyMilepost.csv"
     },
     {
+      "checked_at": "2026-10-01",
       "description": "Underlying geometry for the canonical C&O Canal towpath.",
       "id": "nps_towpath_reference",
       "name": "National Park Service Public Trails dataset",
       "organization": "National Park Service",
+      "published_at": null,
+      "retrieved_at": "2026-08-31",
       "url": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_Trails_Geographic/FeatureServer/0"
     },
     {
+      "checked_at": "2026-10-01",
       "description": "Historical guidebook aqueduct dimensions and masonry details, transcribed from user-supplied page photographs.",
       "id": "sabatke_aqueduct_table",
       "name": "Discovering the C&O Canal and the Adjacent Potomac River",
       "organization": "Schreiber Publishing",
+      "published_at": null,
+      "retrieved_at": "2026-09-30",
       "url": "https://books.google.com/books?id=JcDMGgAACAAJ"
     }
   ]
