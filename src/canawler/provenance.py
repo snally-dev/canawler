@@ -6,11 +6,16 @@ from typing import Any
 
 from canawler.dataset import (
     ACCESS_SOURCE_ID,
+    AQUEDUCT_MILE_SOURCE_ID,
+    AQUEDUCT_SOURCE_ID,
+    CAMPSITE_SOURCE_ID,
     NPS_LOCK_SOURCE_ID,
     RECREATION_SOURCE_ID,
     TOWPATH_SOURCE_ID,
     TRUST_LOCK_SOURCE_ID,
     load_access_points,
+    load_aqueducts,
+    load_campsites,
     load_locks,
     load_recreation_guide,
 )
@@ -20,6 +25,8 @@ from canawler.reference import FEATURESERVER_URL, ReferenceDataError
 def build_sources() -> dict[str, Any]:
     access = load_access_points()["source"]
     recreation = load_recreation_guide()["source"]
+    campsite = load_campsites()["source"]
+    aqueduct_sources = load_aqueducts()["sources"]
     lock_sources = load_locks()["sources"]
     lock_by_role = {source["role"]: source for source in lock_sources}
     try:
@@ -29,9 +36,44 @@ def build_sources() -> dict[str, Any]:
         raise ReferenceDataError(
             "lock source roles do not match the expected schema"
         ) from error
+    aqueduct_by_role = {source["role"]: source for source in aqueduct_sources}
+    try:
+        guide_aqueducts = aqueduct_by_role["Historical aqueduct construction table"]
+        trust_aqueducts = aqueduct_by_role["Aqueduct names and mileposts"]
+    except KeyError as error:
+        raise ReferenceDataError(
+            "aqueduct source roles do not match the expected schema"
+        ) from error
 
     sources = sorted(
         [
+            {
+                "id": AQUEDUCT_MILE_SOURCE_ID,
+                "name": trust_aqueducts["name"],
+                "organization": "C&O Canal Trust",
+                "url": trust_aqueducts["url"],
+                "description": "Normalized aqueduct names and reference mileposts.",
+            },
+            {
+                "id": AQUEDUCT_SOURCE_ID,
+                "name": guide_aqueducts["name"],
+                "organization": "Schreiber Publishing",
+                "url": guide_aqueducts["url"],
+                "description": (
+                    "Historical guidebook aqueduct dimensions and masonry details, "
+                    "transcribed from user-supplied page photographs."
+                ),
+            },
+            {
+                "id": CAMPSITE_SOURCE_ID,
+                "name": campsite["name"],
+                "organization": "National Park Service",
+                "url": campsite["url"],
+                "description": (
+                    "Current official campground types and mileposts, approved "
+                    f"{campsite['approved']}."
+                ),
+            },
             {
                 "id": ACCESS_SOURCE_ID,
                 "name": access["name"],
@@ -74,8 +116,17 @@ def build_sources() -> dict[str, Any]:
     )
     artifacts = {
         "access-points": [ACCESS_SOURCE_ID, RECREATION_SOURCE_ID],
+        "aqueducts": [
+            AQUEDUCT_MILE_SOURCE_ID,
+            AQUEDUCT_SOURCE_ID,
+            TOWPATH_SOURCE_ID,
+        ],
+        "campsites": [CAMPSITE_SOURCE_ID, TOWPATH_SOURCE_ID],
         "features": [
             ACCESS_SOURCE_ID,
+            AQUEDUCT_MILE_SOURCE_ID,
+            AQUEDUCT_SOURCE_ID,
+            CAMPSITE_SOURCE_ID,
             NPS_LOCK_SOURCE_ID,
             RECREATION_SOURCE_ID,
             TOWPATH_SOURCE_ID,
@@ -84,6 +135,8 @@ def build_sources() -> dict[str, Any]:
         "locks": [NPS_LOCK_SOURCE_ID, TRUST_LOCK_SOURCE_ID, TOWPATH_SOURCE_ID],
         "relationships": [
             ACCESS_SOURCE_ID,
+            AQUEDUCT_MILE_SOURCE_ID,
+            CAMPSITE_SOURCE_ID,
             NPS_LOCK_SOURCE_ID,
             RECREATION_SOURCE_ID,
             TRUST_LOCK_SOURCE_ID,

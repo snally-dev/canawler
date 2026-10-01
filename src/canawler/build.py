@@ -45,6 +45,31 @@ ACCESS_COLUMNS = (
     *AMENITY_FIELDS,
     "source_ids",
 )
+AQUEDUCT_COLUMNS = (
+    "id",
+    "name",
+    "waterway",
+    "mile",
+    "latitude",
+    "longitude",
+    "guidebook_span_ft",
+    "arches",
+    "arch_lengths",
+    "stone",
+    "masonry_description",
+    "source_ids",
+)
+CAMPSITE_COLUMNS = (
+    "id",
+    "name",
+    "mile",
+    "group_mile",
+    "latitude",
+    "longitude",
+    "campground_types",
+    "reservation_required",
+    "source_ids",
+)
 LOCK_COLUMNS = (
     "id",
     "lock_number",
@@ -73,6 +98,8 @@ SOURCE_COLUMNS = ("id", "name", "organization", "url", "description")
 class BuildReport:
     files: tuple[Path, ...]
     access_points: int
+    aqueducts: int
+    campsites: int
     locks: int
     features: int
     relationships: int
@@ -81,6 +108,8 @@ class BuildReport:
         return "\n".join(
             (
                 f"Access points: {self.access_points}",
+                f"Aqueducts: {self.aqueducts}",
+                f"Campsites: {self.campsites}",
                 f"Locks: {self.locks}",
                 f"Features: {self.features}",
                 f"Relationships: {self.relationships}",
@@ -156,6 +185,14 @@ def build_public_data(output_directory: Path = PUBLIC_DIR) -> BuildReport:
             "schema_version": SCHEMA_VERSION,
             "access_points": records["access_points"],
         },
+        "aqueducts": {
+            "schema_version": SCHEMA_VERSION,
+            "aqueducts": records["aqueducts"],
+        },
+        "campsites": {
+            "schema_version": SCHEMA_VERSION,
+            "campsites": records["campsites"],
+        },
         "features": {"schema_version": SCHEMA_VERSION, "features": records["features"]},
         "locks": {"schema_version": SCHEMA_VERSION, "locks": records["locks"]},
         "relationships": {
@@ -172,6 +209,8 @@ def build_public_data(output_directory: Path = PUBLIC_DIR) -> BuildReport:
 
     csv_outputs = {
         "access-points": (_access_csv(records["access_points"]), ACCESS_COLUMNS),
+        "aqueducts": (records["aqueducts"], AQUEDUCT_COLUMNS),
+        "campsites": (records["campsites"], CAMPSITE_COLUMNS),
         "features": (records["features"], FEATURE_COLUMNS),
         "locks": (records["locks"], LOCK_COLUMNS),
         "relationships": (records["relationships"], RELATIONSHIP_COLUMNS),
@@ -195,6 +234,8 @@ def build_public_data(output_directory: Path = PUBLIC_DIR) -> BuildReport:
     return BuildReport(
         files=tuple(files),
         access_points=counts["access_points"],
+        aqueducts=counts["aqueducts"],
+        campsites=counts["campsites"],
         locks=counts["locks"],
         features=counts["features"],
         relationships=counts["relationships"],

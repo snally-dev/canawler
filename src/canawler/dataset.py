@@ -24,6 +24,9 @@ RECREATION_SOURCE_ID = "nps_recreation_guide"
 NPS_LOCK_SOURCE_ID = "nps_lift_locks"
 TRUST_LOCK_SOURCE_ID = "co_canal_trust_locks"
 TOWPATH_SOURCE_ID = "nps_towpath_reference"
+AQUEDUCT_SOURCE_ID = "sabatke_aqueduct_table"
+AQUEDUCT_MILE_SOURCE_ID = "co_canal_trust_aqueducts"
+CAMPSITE_SOURCE_ID = "nps_2026_superintendents_compendium"
 
 AMENITY_FIELDS = (
     "parking",
@@ -195,6 +198,96 @@ def load_recreation_guide(path: Path | None = None) -> dict[str, Any]:
     return data
 
 
+def load_aqueducts(path: Path | None = None) -> dict[str, Any]:
+    path = path or REFERENCE_DIR / "aqueducts.json"
+    data = _load_object(path)
+    sources = data.get("sources")
+    if not isinstance(sources, list) or len(sources) != 2:
+        raise ReferenceDataError(f"{path}: expected two aqueduct sources")
+    for source in sources:
+        _source(source, str(path))
+    records = data.get("aqueducts")
+    if not isinstance(records, list) or len(records) != 11:
+        raise ReferenceDataError(f"{path}: expected exactly 11 aqueducts")
+    expected = {
+        "name",
+        "waterway",
+        "milepost",
+        "guidebook_span_ft",
+        "arches",
+        "arch_lengths",
+        "stone",
+        "masonry_description",
+    }
+    previous = -1.0
+    for index, record in enumerate(records):
+        label = f"{path}: aqueduct {index}"
+        if not isinstance(record, dict) or set(record) != expected:
+            raise ReferenceDataError(f"{label}: fields do not match the schema")
+        if any(
+            not isinstance(record[field], str) or not record[field].strip()
+            for field in ("name", "waterway", "arch_lengths", "stone")
+        ):
+            raise ReferenceDataError(f"{label}: text fields are required")
+        mile = _check_mile(record["milepost"], f"{label} milepost")
+        if mile <= previous:
+            raise ReferenceDataError(f"{path}: aqueducts must be in canal order")
+        previous = mile
+        if (
+            isinstance(record["guidebook_span_ft"], bool)
+            or not isinstance(record["guidebook_span_ft"], int)
+            or record["guidebook_span_ft"] <= 0
+            or isinstance(record["arches"], bool)
+            or not isinstance(record["arches"], int)
+            or record["arches"] <= 0
+        ):
+            raise ReferenceDataError(
+                f"{label}: span and arches must be positive integers"
+            )
+        description = record["masonry_description"]
+        if description is not None and (
+            not isinstance(description, str) or not description.strip()
+        ):
+            raise ReferenceDataError(f"{label}: invalid masonry description")
+    return data
+
+
+def load_campsites(path: Path | None = None) -> dict[str, Any]:
+    path = path or REFERENCE_DIR / "campsites.json"
+    data = _load_object(path)
+    _source(data.get("source"), str(path))
+    records = data.get("campgrounds")
+    if not isinstance(records, list) or len(records) != 37:
+        raise ReferenceDataError(f"{path}: expected exactly 37 campgrounds")
+    expected = {"name", "milepost", "group_milepost", "campground_types"}
+    allowed_types = {"hiker_biker", "drive_in", "walk_in", "group"}
+    previous: tuple[float, str] | None = None
+    for index, record in enumerate(records):
+        label = f"{path}: campground {index}"
+        if not isinstance(record, dict) or set(record) != expected:
+            raise ReferenceDataError(f"{label}: fields do not match the schema")
+        if not isinstance(record["name"], str) or not record["name"].strip():
+            raise ReferenceDataError(f"{label}: name is required")
+        mile = _check_mile(record["milepost"], f"{label} milepost")
+        group_mile = record["group_milepost"]
+        if group_mile is not None:
+            _check_mile(group_mile, f"{label} group_milepost")
+        kinds = record["campground_types"]
+        if (
+            not isinstance(kinds, list)
+            or not kinds
+            or kinds != sorted(set(kinds))
+            or not set(kinds) <= allowed_types
+            or (("group" in kinds) != (group_mile is not None))
+        ):
+            raise ReferenceDataError(f"{label}: invalid campground types")
+        order = (mile, record["name"])
+        if previous is not None and order < previous:
+            raise ReferenceDataError(f"{path}: campgrounds must be in canal order")
+        previous = order
+    return data
+
+
 def normalize_name(value: str) -> str:
     value = value.casefold().replace("’", "'")
     value = re.sub(r"'s\b", "s", value)
@@ -258,6 +351,17 @@ def names_match(left: str, right: str) -> bool:
     return any(len(token) >= 5 for token in left_tokens & right_tokens)
 
 
+def campground_names_match(left: str, right: str) -> bool:
+    """Match known campground label variants without broad token matching."""
+    left_name = normalize_name(left).replace("juntion", "junction")
+    right_name = normalize_name(right).replace("juntion", "junction")
+    return (
+        left_name == right_name
+        or left_name.endswith(f" {right_name}")
+        or right_name.endswith(f" {left_name}")
+    )
+
+
 def mile_distance(record: dict[str, Any], milepost: float) -> float:
     start = Decimal(str(record["milepost"]))
     end = Decimal(str(record.get("milepost_end") or record["milepost"]))
@@ -307,14 +411,20 @@ def build_records(geometry: LineString) -> dict[str, Any]:
     access_data = load_access_points()
     lock_data = load_locks()
     recreation_data = load_recreation_guide()
+    aqueduct_data = load_aqueducts()
+    campsite_data = load_campsites()
     access_input = access_data["access_points"]
     lock_input = lock_data["locks"]
     recreation_input = recreation_data["locations"]
+    aqueduct_input = aqueduct_data["aqueducts"]
+    campsite_input = campsite_data["campgrounds"]
     locate_mile = milepoint_locator(geometry)
 
     access_ids = stable_ids("access", access_input)
     lock_ids = [f"lock-{_slug(record['lock_number'])}" for record in lock_input]
     recreation_ids = stable_ids("nps", recreation_input)
+    aqueduct_ids = stable_ids("aqueduct", aqueduct_input)
+    campsite_ids = stable_ids("campground", campsite_input)
     if len(lock_ids) != len(set(lock_ids)):
         raise ReferenceDataError("lock IDs are not unique")
 
@@ -376,6 +486,47 @@ def build_records(geometry: LineString) -> dict[str, Any]:
             }
         )
 
+    aqueducts = []
+    for record, public_id in zip(aqueduct_input, aqueduct_ids, strict=True):
+        latitude, longitude = locate_mile(record["milepost"])
+        aqueducts.append(
+            {
+                "id": public_id,
+                "name": record["name"],
+                "waterway": record["waterway"],
+                "mile": record["milepost"],
+                "latitude": latitude,
+                "longitude": longitude,
+                "guidebook_span_ft": record["guidebook_span_ft"],
+                "arches": record["arches"],
+                "arch_lengths": record["arch_lengths"],
+                "stone": record["stone"],
+                "masonry_description": record["masonry_description"],
+                "source_ids": [
+                    AQUEDUCT_SOURCE_ID,
+                    AQUEDUCT_MILE_SOURCE_ID,
+                    TOWPATH_SOURCE_ID,
+                ],
+            }
+        )
+
+    campsites = []
+    for record, public_id in zip(campsite_input, campsite_ids, strict=True):
+        latitude, longitude = locate_mile(record["milepost"])
+        campsites.append(
+            {
+                "id": public_id,
+                "name": record["name"],
+                "mile": record["milepost"],
+                "group_mile": record["group_milepost"],
+                "latitude": latitude,
+                "longitude": longitude,
+                "campground_types": record["campground_types"],
+                "reservation_required": record["campground_types"] != ["hiker_biker"],
+                "source_ids": [CAMPSITE_SOURCE_ID, TOWPATH_SOURCE_ID],
+            }
+        )
+
     features = [
         {
             "id": record["id"],
@@ -402,14 +553,79 @@ def build_records(geometry: LineString) -> dict[str, Any]:
         }
         for record in locks
     )
+    features.extend(
+        {
+            "id": record["id"],
+            "name": record["name"],
+            "feature_type": "aqueduct",
+            "mile": record["mile"],
+            "mile_end": None,
+            "latitude": record["latitude"],
+            "longitude": record["longitude"],
+            "source_ids": record["source_ids"],
+        }
+        for record in aqueducts
+    )
+    features.extend(
+        {
+            "id": record["id"],
+            "name": record["name"],
+            "feature_type": "campground",
+            "mile": record["mile"],
+            "mile_end": None,
+            "latitude": record["latitude"],
+            "longitude": record["longitude"],
+            "source_ids": record["source_ids"],
+        }
+        for record in campsites
+    )
 
     lock_id_by_number = {
         record["lock_number"]: public_id
         for record, public_id in zip(lock_input, lock_ids, strict=True)
     }
+    recreation_target_ids = list(recreation_ids)
+    for index, record in enumerate(recreation_input):
+        lock_target = lock_id_by_number.get(_lock_number(record["name"]))
+        if lock_target is not None:
+            recreation_target_ids[index] = lock_target
+            continue
+        if record["amenities"]["camping"]:
+            campground_matches = [
+                (candidate, public_id)
+                for candidate, public_id in zip(
+                    campsite_input, campsite_ids, strict=True
+                )
+                if campground_names_match(record["name"], candidate["name"])
+            ]
+            if not campground_matches:
+                campground_matches = [
+                    (candidate, public_id)
+                    for candidate, public_id in zip(
+                        campsite_input, campsite_ids, strict=True
+                    )
+                    if abs(record["milepost"] - candidate["milepost"]) <= 0.15
+                ]
+            if len(campground_matches) == 1:
+                recreation_target_ids[index] = campground_matches[0][1]
+                continue
+        if feature_type(record["name"], record["amenities"]) == "aqueduct":
+            aqueduct_matches = [
+                public_id
+                for candidate, public_id in zip(
+                    aqueduct_input, aqueduct_ids, strict=True
+                )
+                if names_match(record["name"], candidate["name"])
+                and abs(record["milepost"] - candidate["milepost"]) <= 0.35
+            ]
+            if len(aqueduct_matches) == 1:
+                recreation_target_ids[index] = aqueduct_matches[0]
+
     recreation_features: list[dict[str, Any]] = []
-    for record, public_id in zip(recreation_input, recreation_ids, strict=True):
-        if _lock_number(record["name"]) in lock_id_by_number:
+    for record, public_id, target_id in zip(
+        recreation_input, recreation_ids, recreation_target_ids, strict=True
+    ):
+        if target_id != public_id:
             continue
         latitude, longitude = locate_mile(record["milepost"])
         item = {
@@ -439,8 +655,7 @@ def build_records(geometry: LineString) -> dict[str, Any]:
         access_input, access_ids, match_indexes, strict=True
     ):
         for index in indexes:
-            source_lock_number = _lock_number(recreation_input[index]["name"])
-            target_id = lock_id_by_number.get(source_lock_number, recreation_ids[index])
+            target_id = recreation_target_ids[index]
             relationships.append(
                 {
                     "relationship_type": "source_match",
@@ -486,11 +701,15 @@ def build_records(geometry: LineString) -> dict[str, Any]:
     return {
         "access_points": access_points,
         "locks": locks,
+        "aqueducts": aqueducts,
+        "campsites": campsites,
         "features": features,
         "relationships": relationships,
         "counts": {
             "access_points": len(access_points),
             "locks": len(locks),
+            "aqueducts": len(aqueducts),
+            "campsites": len(campsites),
             "features": len(features),
             "relationships": len(relationships),
             "recreation_features": len(recreation_features),
@@ -503,7 +722,10 @@ __all__ = [
     "CANAL_MILES",
     "SCHEMA_VERSION",
     "build_records",
+    "campground_names_match",
+    "load_aqueducts",
     "load_access_points",
+    "load_campsites",
     "load_locks",
     "load_recreation_guide",
     "mile_distance",

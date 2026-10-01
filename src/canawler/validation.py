@@ -53,9 +53,11 @@ def validate_public_records(records: dict[str, Any], sources: dict[str, Any]) ->
     source_ids = _unique_ids(sources["sources"], "sources", url_safe=False)
     feature_ids = _unique_ids(records["features"], "features")
     access_ids = _unique_ids(records["access_points"], "access points")
+    aqueduct_ids = _unique_ids(records["aqueducts"], "aqueducts")
+    campsite_ids = _unique_ids(records["campsites"], "campsites")
     lock_ids = _unique_ids(records["locks"], "locks")
-    if not (access_ids | lock_ids) <= feature_ids:
-        raise ReferenceDataError("dedicated access-point and lock IDs must be features")
+    if not (access_ids | aqueduct_ids | campsite_ids | lock_ids) <= feature_ids:
+        raise ReferenceDataError("dedicated dataset IDs must be features")
 
     for index, record in enumerate(records["features"]):
         _feature_fields(record, f"feature {index}")
@@ -75,6 +77,13 @@ def validate_public_records(records: dict[str, Any], sources: dict[str, Any]) ->
         unknown = set(ids) - source_ids
         if unknown:
             raise ReferenceDataError(f"artifact {artifact}: unknown sources {unknown}")
+    for label in ("aqueducts", "campsites"):
+        for record in records[label]:
+            unknown = set(record["source_ids"]) - source_ids
+            if unknown:
+                raise ReferenceDataError(
+                    f"{label} record {record['id']}: unknown sources {unknown}"
+                )
     for relationship in records["relationships"]:
         if relationship["from_id"] not in access_ids:
             raise ReferenceDataError("relationship source must be an access point")

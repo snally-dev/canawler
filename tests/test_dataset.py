@@ -10,6 +10,8 @@ from canawler.build import build_public_data
 from canawler.dataset import (
     build_records,
     load_access_points,
+    load_aqueducts,
+    load_campsites,
     load_locks,
     load_recreation_guide,
     names_match,
@@ -29,6 +31,8 @@ def test_reference_inputs_and_geometry_validate() -> None:
 
     assert len(geometry.coords) == 9_907
     assert len(load_access_points()["access_points"]) == 81
+    assert len(load_aqueducts()["aqueducts"]) == 11
+    assert len(load_campsites()["campgrounds"]) == 37
     assert len(load_locks()["locks"]) == 74
     assert len(load_recreation_guide()["locations"]) == 79
 
@@ -41,9 +45,11 @@ def test_public_records_have_stable_unique_ids_and_known_sources() -> None:
     assert records["counts"] == {
         "access_points": 81,
         "locks": 74,
-        "features": 221,
-        "relationships": 286,
-        "recreation_features": 66,
+        "aqueducts": 11,
+        "campsites": 37,
+        "features": 232,
+        "relationships": 297,
+        "recreation_features": 29,
     }
     assert records["features"][0]["id"] == "access-georgetown-0-0"
     assert records["features"][-1]["id"] == "nps-canal-terminus-cumberland-184-5"
@@ -149,11 +155,34 @@ def test_corridor_specific_features_are_in_the_common_index() -> None:
     records = build_records(validate_canonical_reference())
     types = {record["feature_type"] for record in records["features"]}
 
-    assert {"aqueduct", "dam", "railroad_junction", "railroad_station"} <= types
+    assert {"aqueduct", "campground", "dam", "railroad_station"} <= types
+
+
+def test_current_campsites_supersede_historical_and_older_guide_values() -> None:
+    records = build_records(validate_canonical_reference())
+    campsites = {record["name"]: record for record in records["campsites"]}
+
+    assert campsites["Little Pool"]["mile"] == 120.6
+    assert campsites["Fifteenmile Creek"]["group_mile"] == 141.0
+    assert campsites["Swains Lock"]["reservation_required"] is False
+    assert "Appalachian Trail" not in campsites
+
+
+def test_aqueducts_preserve_guidebook_measurements_with_current_mileposts() -> None:
+    records = build_records(validate_canonical_reference())
+    aqueducts = {record["name"]: record for record in records["aqueducts"]}
+
+    assert aqueducts["Monocacy Aqueduct"]["mile"] == 42.2
+    assert aqueducts["Monocacy Aqueduct"]["guidebook_span_ft"] == 433
+    assert aqueducts["Monocacy Aqueduct"]["arches"] == 7
 
 
 def test_json_outputs_are_documents_not_bare_arrays() -> None:
     features = json.loads(Path("data/public/json/features.json").read_text())
+    aqueducts = json.loads(Path("data/public/json/aqueducts.json").read_text())
+    campsites = json.loads(Path("data/public/json/campsites.json").read_text())
 
     assert features["schema_version"] == 1
     assert isinstance(features["features"], list)
+    assert len(aqueducts["aqueducts"]) == 11
+    assert len(campsites["campsites"]) == 37
