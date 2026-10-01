@@ -1,14 +1,12 @@
 ---
-title: "Canawler"
-subtitle: "The C&O Canal, structured as data."
+title: "The C&O Canal, structured as data."
+pagetitle: "The C&O Canal, structured as data"
+description-meta: "Explore a reproducible, source-aware dataset of places and geography along the Chesapeake & Ohio Canal."
 page-layout: full
-title-block-style: none
 ---
 
 ::: {.hero}
 ::: {.hero-copy}
-# The C&O Canal, structured as data.
-
 A reproducible, source-aware dataset for exploring the places and geography of
 the 184.5-mile Chesapeake & Ohio Canal corridor.
 
@@ -22,6 +20,8 @@ the 184.5-mile Chesapeake & Ohio Canal corridor.
 
 towpath = FileAttachment("data/public/towpath.geojson").json()
 features = FileAttachment("data/public/json/features.json").json()
+accessPoints = FileAttachment("data/public/json/access-points.json").json()
+locks = FileAttachment("data/public/json/locks.json").json()
 
 corridorMap = {
   const coords = towpath.features[0].geometry.coordinates;
@@ -75,33 +75,31 @@ corridorMap = {
 }
 ```
 
+<noscript>
+The map requires JavaScript. You can still [explore the downloadable datasets](data.qmd),
+including the complete feature index in [CSV](data/public/csv/features.csv) and
+[JSON](data/public/json/features.json).
+</noscript>
+
 ::: {.map-key}
 <span><i class="key-access"></i> Access points</span>
 <span><i class="key-lock"></i> Locks</span>
 :::
 
-::: {.stat-grid}
-::: {.stat}
-## 184.5
+```{ojs}
+//| echo: false
 
-official canal miles
-:::
-::: {.stat}
-## 81
+accessPointCount = accessPoints.access_points.length
+liftLockCount = locks.locks.length
+featureCount = features.features.length
 
-access points
-:::
-::: {.stat}
-## 74
-
-lift locks
-:::
-::: {.stat}
-## 232
-
-normalized features
-:::
-:::
+summaryStats = html`<div class="stat-grid" aria-label="Dataset summary">
+  <div class="stat"><h2>184.5</h2><p>official canal miles</p></div>
+  <div class="stat"><h2>${accessPointCount}</h2><p>access points</p></div>
+  <div class="stat"><h2>${liftLockCount}</h2><p>lift locks</p></div>
+  <div class="stat"><h2>${featureCount}</h2><p>normalized features</p></div>
+</div>`
+```
 
 Canawler turns curated public references into stable CSV, JSON, and GeoJSON. The
 pipeline records where facts came from, validates the important assumptions, and
