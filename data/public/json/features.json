@@ -425,6 +425,19 @@
       ]
     },
     {
+      "feature_type": "campground",
+      "id": "campground-marsden-tract-11-0",
+      "latitude": 38.977644,
+      "longitude": -77.212449,
+      "mile": 11.0,
+      "mile_end": null,
+      "name": "Marsden Tract",
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "access_point",
       "id": "access-marsden-tract-11-4",
       "latitude": 38.978697,
@@ -435,19 +448,6 @@
       "source_ids": [
         "co_canal_association_access_points",
         "nps_recreation_guide"
-      ]
-    },
-    {
-      "feature_type": "campground",
-      "id": "nps-marsden-tract-11-5",
-      "latitude": 38.977266,
-      "longitude": -77.221558,
-      "mile": 11.5,
-      "mile_end": null,
-      "name": "Marsden Tract",
-      "source_ids": [
-        "nps_recreation_guide",
-        "nps_towpath_reference"
       ]
     },
     {
@@ -600,6 +600,19 @@
       ]
     },
     {
+      "feature_type": "campground",
+      "id": "campground-swains-lock-16-6",
+      "latitude": 39.033317,
+      "longitude": -77.247584,
+      "mile": 16.6,
+      "mile_end": null,
+      "name": "Swains Lock",
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "lock",
       "id": "lock-21",
       "latitude": 39.034545,
@@ -668,6 +681,20 @@
       ]
     },
     {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-seneca-aqueduct-22-7",
+      "latitude": 39.068409,
+      "longitude": -77.34474,
+      "mile": 22.7,
+      "mile_end": null,
+      "name": "Seneca Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "access_point",
       "id": "access-rileys-lock-22-8",
       "latitude": 39.069167,
@@ -709,14 +736,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-horsepen-branch-26-1",
+      "id": "campground-horsepen-branch-26-1",
       "latitude": 39.070955,
       "longitude": -77.407783,
       "mile": 26.1,
       "mile_end": null,
       "name": "Horsepen Branch",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -748,14 +775,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-chisel-branch-30-5",
+      "id": "campground-chisel-branch-30-5",
       "latitude": 39.103718,
       "longitude": -77.47244,
       "mile": 30.5,
       "mile_end": null,
       "name": "Chisel Branch",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -801,14 +828,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-turtle-run-34-4",
+      "id": "campground-turtle-run-34-4",
       "latitude": 39.140468,
       "longitude": -77.515859,
       "mile": 34.4,
       "mile_end": null,
       "name": "Turtle Run",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -840,14 +867,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-marble-quarry-38-2",
+      "id": "campground-marble-quarry-38-2",
       "latitude": 39.181872,
       "longitude": -77.485457,
       "mile": 38.2,
       "mile_end": null,
       "name": "Marble Quarry",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -906,27 +933,28 @@
     },
     {
       "feature_type": "aqueduct",
-      "id": "nps-monocacy-aqueduct-42-2",
+      "id": "aqueduct-monocacy-aqueduct-42-2",
       "latitude": 39.227429,
       "longitude": -77.45473,
       "mile": 42.2,
       "mile_end": null,
       "name": "Monocacy Aqueduct",
       "source_ids": [
-        "nps_recreation_guide",
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
         "nps_towpath_reference"
       ]
     },
     {
       "feature_type": "campground",
-      "id": "nps-indian-flats-42-5",
+      "id": "campground-indian-flats-42-5",
       "latitude": 39.23083,
       "longitude": -77.458139,
       "mile": 42.5,
       "mile_end": null,
       "name": "Indian Flats",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -958,14 +986,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-calico-rocks-47-6",
+      "id": "campground-calico-rocks-47-6",
       "latitude": 39.27256,
       "longitude": -77.533248,
       "mile": 47.6,
       "mile_end": null,
       "name": "Calico Rocks",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1011,14 +1039,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-bald-eagle-island-50-3",
+      "id": "campground-bald-eagle-island-50-3",
       "latitude": 39.301381,
       "longitude": -77.556463,
       "mile": 50.3,
       "mile_end": null,
       "name": "Bald Eagle Island",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1047,6 +1075,20 @@
       "source_ids": [
         "co_canal_association_access_points",
         "nps_recreation_guide"
+      ]
+    },
+    {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-catoctin-aqueduct-51-5",
+      "latitude": 39.310898,
+      "longitude": -77.571695,
+      "mile": 51.5,
+      "mile_end": null,
+      "name": "Catoctin Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
       ]
     },
     {
@@ -1182,19 +1224,6 @@
       ]
     },
     {
-      "feature_type": "campground",
-      "id": "nps-huckleberry-hill-62-0",
-      "latitude": 39.336603,
-      "longitude": -77.75009,
-      "mile": 62.0,
-      "mile_end": null,
-      "name": "Huckleberry Hill",
-      "source_ids": [
-        "nps_recreation_guide",
-        "nps_towpath_reference"
-      ]
-    },
-    {
       "feature_type": "lock",
       "id": "lock-35",
       "latitude": 39.337156,
@@ -1219,6 +1248,19 @@
       "source_ids": [
         "nps_lift_locks",
         "co_canal_trust_locks",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "feature_type": "campground",
+      "id": "campground-huckleberry-hill-62-9",
+      "latitude": 39.344378,
+      "longitude": -77.754876,
+      "mile": 62.9,
+      "mile_end": null,
+      "name": "Huckleberry Hill",
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1275,6 +1317,20 @@
       ]
     },
     {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-antietam-aqueduct-69-4",
+      "latitude": 39.419226,
+      "longitude": -77.747129,
+      "mile": 69.4,
+      "mile_end": null,
+      "name": "Antietam Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "access_point",
       "id": "access-antietam-69-5",
       "latitude": 39.419001,
@@ -1289,14 +1345,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-antietam-creek-69-6",
-      "latitude": 39.421685,
-      "longitude": -77.749059,
-      "mile": 69.6,
+      "id": "campground-antietam-creek-69-7",
+      "latitude": 39.422894,
+      "longitude": -77.750067,
+      "mile": 69.7,
       "mile_end": null,
       "name": "Antietam Creek",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1368,14 +1424,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-killiansburg-cave-75-2",
+      "id": "campground-killiansburg-cave-75-2",
       "latitude": 39.459017,
       "longitude": -77.796743,
       "mile": 75.2,
       "mile_end": null,
       "name": "Killiansburg Cave",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1407,14 +1463,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-horseshoe-bend-79-2",
+      "id": "campground-horseshoe-bend-79-2",
       "latitude": 39.485611,
       "longitude": -77.780687,
       "mile": 79.2,
       "mile_end": null,
       "name": "Horseshoe Bend",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1460,14 +1516,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-big-woods-82-7",
+      "id": "campground-big-woods-82-7",
       "latitude": 39.491757,
       "longitude": -77.797918,
       "mile": 82.7,
       "mile_end": null,
       "name": "Big Woods",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1590,15 +1646,15 @@
       ]
     },
     {
-      "feature_type": "railroad_junction",
-      "id": "nps-opequon-junction-90-9",
+      "feature_type": "campground",
+      "id": "campground-opequon-junction-90-9",
       "latitude": 39.516661,
       "longitude": -77.862118,
       "mile": 90.9,
       "mile_end": null,
       "name": "Opequon Junction",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1618,14 +1674,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-cumberland-valley-95-2",
+      "id": "campground-cumberland-valley-95-2",
       "latitude": 39.561766,
       "longitude": -77.869969,
       "mile": 95.2,
       "mile_end": null,
       "name": "Cumberland Valley",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1657,6 +1713,20 @@
       ]
     },
     {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-conococheague-aqueduct-99-6",
+      "latitude": 39.599633,
+      "longitude": -77.826794,
+      "mile": 99.6,
+      "mile_end": null,
+      "name": "Conococheague Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "access_point",
       "id": "access-williamsport-visitor-center-99-8",
       "latitude": 39.600996,
@@ -1683,15 +1753,15 @@
       ]
     },
     {
-      "feature_type": "railroad_junction",
-      "id": "nps-jordan-junction-101-2",
+      "feature_type": "campground",
+      "id": "campground-jordan-junction-101-2",
       "latitude": 39.609492,
       "longitude": -77.85102,
       "mile": 101.2,
       "mile_end": null,
       "name": "Jordan Junction",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1869,14 +1939,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-north-mountain-110-0",
+      "id": "campground-north-mountain-110-0",
       "latitude": 39.61052,
       "longitude": -77.963543,
       "mile": 110.0,
       "mile_end": null,
       "name": "North Mountain",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1895,14 +1965,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-mccoys-ferry-110-4",
+      "id": "campground-mccoys-ferry-110-4",
       "latitude": 39.608148,
       "longitude": -77.970382,
       "mile": 110.4,
       "mile_end": null,
       "name": "McCoys Ferry",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -1959,14 +2029,28 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-licking-creek-116-0",
+      "id": "campground-licking-creek-116-0",
       "latitude": 39.646154,
       "longitude": -78.045378,
       "mile": 116.0,
       "mile_end": null,
       "name": "Licking Creek",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-licking-creek-aqueduct-116-1",
+      "latitude": 39.647208,
+      "longitude": -78.046654,
+      "mile": 116.1,
+      "mile_end": null,
+      "name": "Licking Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
         "nps_towpath_reference"
       ]
     },
@@ -1993,6 +2077,19 @@
       "name": "Little Pool",
       "source_ids": [
         "co_canal_association_access_points"
+      ]
+    },
+    {
+      "feature_type": "campground",
+      "id": "campground-little-pool-120-6",
+      "latitude": 39.684735,
+      "longitude": -78.112274,
+      "mile": 120.6,
+      "mile_end": null,
+      "name": "Little Pool",
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
       ]
     },
     {
@@ -2036,6 +2133,20 @@
       ]
     },
     {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-tonoloway-aqueduct-123-0",
+      "latitude": 39.693749,
+      "longitude": -78.155571,
+      "mile": 123.0,
+      "mile_end": null,
+      "name": "Tonoloway Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "access_point",
       "id": "access-hancock-124-1",
       "latitude": 39.698253,
@@ -2074,40 +2185,27 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-white-rock-126-4",
+      "id": "campground-white-rock-126-4",
       "latitude": 39.678539,
       "longitude": -78.206563,
       "mile": 126.4,
       "mile_end": null,
       "name": "White Rock",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
     {
       "feature_type": "campground",
-      "id": "nps-little-pool-126-6",
-      "latitude": 39.677996,
-      "longitude": -78.210251,
-      "mile": 126.6,
-      "mile_end": null,
-      "name": "Little Pool",
-      "source_ids": [
-        "nps_recreation_guide",
-        "nps_towpath_reference"
-      ]
-    },
-    {
-      "feature_type": "campground",
-      "id": "nps-leopards-mill-129-9",
+      "id": "campground-leopards-mill-129-9",
       "latitude": 39.653048,
       "longitude": -78.238459,
       "mile": 129.9,
       "mile_end": null,
       "name": "Leopards Mill",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2153,14 +2251,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-cacapon-juntion-133-6",
+      "id": "campground-cacapon-junction-133-6",
       "latitude": 39.621978,
       "longitude": -78.282096,
       "mile": 133.6,
       "mile_end": null,
-      "name": "Cacapon Juntion",
+      "name": "Cacapon Junction",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2243,15 +2341,29 @@
       ]
     },
     {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-sideling-hill-creek-aqueduct-136-6",
+      "latitude": 39.639332,
+      "longitude": -78.333423,
+      "mile": 136.6,
+      "mile_end": null,
+      "name": "Sideling Hill Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "campground",
-      "id": "nps-indigo-neck-139-2",
+      "id": "campground-indigo-neck-139-2",
       "latitude": 39.627074,
       "longitude": -78.359089,
       "mile": 139.2,
       "mile_end": null,
       "name": "Indigo Neck",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2282,15 +2394,29 @@
       ]
     },
     {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-fifteenmile-creek-aqueduct-140-9",
+      "latitude": 39.625693,
+      "longitude": -78.386301,
+      "mile": 140.9,
+      "mile_end": null,
+      "name": "Fifteenmile Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "campground",
-      "id": "nps-fifteenmile-creek-140-9",
+      "id": "campground-fifteenmile-creek-140-9",
       "latitude": 39.625693,
       "longitude": -78.386301,
       "mile": 140.9,
       "mile_end": null,
       "name": "Fifteenmile Creek",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2310,14 +2436,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-devils-alley-144-5",
+      "id": "campground-devils-alley-144-5",
       "latitude": 39.62283,
       "longitude": -78.413478,
       "mile": 144.5,
       "mile_end": null,
       "name": "Devils Alley",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2349,14 +2475,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-stickpile-hill-149-4",
+      "id": "campground-stickpile-hill-149-4",
       "latitude": 39.582727,
       "longitude": -78.399293,
       "mile": 149.4,
       "mile_end": null,
       "name": "Stickpile Hill",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2426,14 +2552,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-sorrel-ridge-154-1",
+      "id": "campground-sorrel-ridge-154-1",
       "latitude": 39.570954,
       "longitude": -78.452925,
       "mile": 154.1,
       "mile_end": null,
       "name": "Sorrel Ridge",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2494,19 +2620,6 @@
       ]
     },
     {
-      "feature_type": "campground",
-      "id": "nps-paw-paw-156-1",
-      "latitude": 39.54547,
-      "longitude": -78.462511,
-      "mile": 156.1,
-      "mile_end": null,
-      "name": "Paw Paw",
-      "source_ids": [
-        "nps_recreation_guide",
-        "nps_towpath_reference"
-      ]
-    },
-    {
       "feature_type": "access_point",
       "id": "access-paw-paw-tunnel-156-2",
       "latitude": 39.54445,
@@ -2521,14 +2634,27 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-purslane-run-156-9",
+      "id": "campground-paw-paw-156-2",
+      "latitude": 39.544185,
+      "longitude": -78.46168,
+      "mile": 156.2,
+      "mile_end": null,
+      "name": "Paw Paw",
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "feature_type": "campground",
+      "id": "campground-purslane-run-156-9",
       "latitude": 39.535606,
       "longitude": -78.46445,
       "mile": 156.9,
       "mile_end": null,
       "name": "Purslane Run",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2560,14 +2686,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-town-creek-162-1",
+      "id": "campground-town-creek-162-1",
       "latitude": 39.524299,
       "longitude": -78.540338,
       "mile": 162.1,
       "mile_end": null,
       "name": "Town Creek",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2585,15 +2711,29 @@
       ]
     },
     {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-town-creek-aqueduct-162-4",
+      "latitude": 39.523075,
+      "longitude": -78.545697,
+      "mile": 162.4,
+      "mile_end": null,
+      "name": "Town Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ]
+    },
+    {
       "feature_type": "campground",
-      "id": "nps-potomac-forks-164-8",
+      "id": "campground-potomac-forks-164-8",
       "latitude": 39.530476,
       "longitude": -78.588689,
       "mile": 164.8,
       "mile_end": null,
       "name": "Potomac Forks",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2681,14 +2821,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-pigmans-ferry-169-1",
+      "id": "campground-pigmans-ferry-169-1",
       "latitude": 39.539143,
       "longitude": -78.650873,
       "mile": 169.1,
       "mile_end": null,
       "name": "Pigmans Ferry",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2707,14 +2847,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-spring-gap-173-3",
+      "id": "campground-spring-gap-173-3",
       "latitude": 39.56461,
       "longitude": -78.719211,
       "mile": 173.3,
       "mile_end": null,
       "name": "Spring Gap",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2734,14 +2874,14 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-irons-mountain-175-3",
+      "id": "campground-irons-mountain-175-3",
       "latitude": 39.587859,
       "longitude": -78.734986,
       "mile": 175.3,
       "mile_end": null,
       "name": "Irons Mountain",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
         "nps_towpath_reference"
       ]
     },
@@ -2838,14 +2978,28 @@
     },
     {
       "feature_type": "campground",
-      "id": "nps-evitts-creek-180-1",
+      "id": "campground-evitts-creek-180-1",
       "latitude": 39.619127,
       "longitude": -78.733404,
       "mile": 180.1,
       "mile_end": null,
       "name": "Evitts Creek",
       "source_ids": [
-        "nps_recreation_guide",
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "feature_type": "aqueduct",
+      "id": "aqueduct-evitts-creek-aqueduct-180-7",
+      "latitude": 39.625214,
+      "longitude": -78.7406,
+      "mile": 180.7,
+      "mile_end": null,
+      "name": "Evitts Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
         "nps_towpath_reference"
       ]
     },

@@ -5,8 +5,17 @@
       "mile_distance": 0.1,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-antietam-creek-69-6",
-      "to_mile": 69.6,
+      "to_id": "aqueduct-antietam-aqueduct-69-4",
+      "to_mile": 69.4,
+      "to_name": "Antietam Aqueduct"
+    },
+    {
+      "from_id": "access-antietam-69-5",
+      "mile_distance": 0.2,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "campground-antietam-creek-69-7",
+      "to_mile": 69.7,
       "to_name": "Antietam Creek"
     },
     {
@@ -14,18 +23,9 @@
       "mile_distance": 0.8,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-white-rock-126-4",
+      "to_id": "campground-white-rock-126-4",
       "to_mile": 126.4,
       "to_name": "White Rock"
-    },
-    {
-      "from_id": "access-berm-road-125-6",
-      "mile_distance": 1.0,
-      "relationship_type": "nearby",
-      "source_id": null,
-      "to_id": "nps-little-pool-126-6",
-      "to_mile": 126.6,
-      "to_name": "Little Pool"
     },
     {
       "from_id": "access-big-slackwater-boat-ramp-85-4",
@@ -68,7 +68,7 @@
       "mile_distance": 0.7,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-stickpile-hill-149-4",
+      "to_id": "campground-stickpile-hill-149-4",
       "to_mile": 149.4,
       "to_name": "Stickpile Hill"
     },
@@ -236,20 +236,20 @@
     },
     {
       "from_id": "access-carderock-10-4",
+      "mile_distance": 0.2,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "campground-marsden-tract-11-0",
+      "to_mile": 11.0,
+      "to_name": "Marsden Tract"
+    },
+    {
+      "from_id": "access-carderock-10-4",
       "mile_distance": 0.6,
       "relationship_type": "nearby",
       "source_id": null,
       "to_id": "access-marsden-tract-11-4",
       "to_mile": 11.4,
-      "to_name": "Marsden Tract"
-    },
-    {
-      "from_id": "access-carderock-10-4",
-      "mile_distance": 0.7,
-      "relationship_type": "nearby",
-      "source_id": null,
-      "to_id": "nps-marsden-tract-11-5",
-      "to_mile": 11.5,
       "to_name": "Marsden Tract"
     },
     {
@@ -329,7 +329,7 @@
       "mile_distance": 0.8,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-leopards-mill-129-9",
+      "to_id": "campground-leopards-mill-129-9",
       "to_mile": 129.9,
       "to_name": "Leopards Mill"
     },
@@ -482,7 +482,7 @@
       "mile_distance": 0.3,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-chisel-branch-30-5",
+      "to_id": "campground-chisel-branch-30-5",
       "to_mile": 30.5,
       "to_name": "Chisel Branch"
     },
@@ -712,6 +712,15 @@
       "to_name": "Lock 52"
     },
     {
+      "from_id": "access-hancock-visitor-center-122-8",
+      "mile_distance": 0.2,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-tonoloway-aqueduct-123-0",
+      "to_mile": 123.0,
+      "to_name": "Tonoloway Aqueduct"
+    },
+    {
       "from_id": "access-kasecamp-road-147-1",
       "mile_distance": 0.6,
       "relationship_type": "nearby",
@@ -734,16 +743,34 @@
       "mile_distance": 0.6,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-bald-eagle-island-50-3",
+      "to_id": "aqueduct-catoctin-aqueduct-51-5",
+      "to_mile": 51.5,
+      "to_name": "Catoctin Aqueduct"
+    },
+    {
+      "from_id": "access-lander-50-9",
+      "mile_distance": 0.6,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "campground-bald-eagle-island-50-3",
       "to_mile": 50.3,
       "to_name": "Bald Eagle Island"
+    },
+    {
+      "from_id": "access-licking-creek-116-3",
+      "mile_distance": 0.2,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-licking-creek-aqueduct-116-1",
+      "to_mile": 116.1,
+      "to_name": "Licking Creek Aqueduct"
     },
     {
       "from_id": "access-licking-creek-116-3",
       "mile_distance": 0.3,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-licking-creek-116-0",
+      "to_id": "campground-licking-creek-116-0",
       "to_mile": 116.0,
       "to_name": "Licking Creek"
     },
@@ -752,9 +779,27 @@
       "mile_distance": 0.1,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-fifteenmile-creek-140-9",
+      "to_id": "aqueduct-fifteenmile-creek-aqueduct-140-9",
+      "to_mile": 140.9,
+      "to_name": "Fifteenmile Creek Aqueduct"
+    },
+    {
+      "from_id": "access-little-orleans-140-8",
+      "mile_distance": 0.1,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "campground-fifteenmile-creek-140-9",
       "to_mile": 140.9,
       "to_name": "Fifteenmile Creek"
+    },
+    {
+      "from_id": "access-little-pool-119-6",
+      "mile_distance": 1.0,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "campground-little-pool-120-6",
+      "to_mile": 120.6,
+      "to_name": "Little Pool"
     },
     {
       "from_id": "access-lock-10-8-8",
@@ -857,15 +902,6 @@
     },
     {
       "from_id": "access-lock-34-61-6",
-      "mile_distance": 0.4,
-      "relationship_type": "nearby",
-      "source_id": null,
-      "to_id": "nps-huckleberry-hill-62-0",
-      "to_mile": 62.0,
-      "to_name": "Huckleberry Hill"
-    },
-    {
-      "from_id": "access-lock-34-61-6",
       "mile_distance": 0.7,
       "relationship_type": "nearby",
       "source_id": null,
@@ -926,6 +962,15 @@
       "to_id": "lock-44",
       "to_mile": 99.1,
       "to_name": "Lock 44"
+    },
+    {
+      "from_id": "access-lock-44-99-3",
+      "mile_distance": 0.3,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-conococheague-aqueduct-99-6",
+      "to_mile": 99.6,
+      "to_name": "Conococheague Aqueduct"
     },
     {
       "from_id": "access-lock-44-99-3",
@@ -1000,6 +1045,15 @@
       "to_name": "WMRT Pearre parking lot"
     },
     {
+      "from_id": "access-lock-56-pearre-136-2",
+      "mile_distance": 0.4,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-sideling-hill-creek-aqueduct-136-6",
+      "to_mile": 136.6,
+      "to_name": "Sideling Hill Creek Aqueduct"
+    },
+    {
       "from_id": "access-lock-6-5-4",
       "mile_distance": 0.0,
       "relationship_type": "nearby",
@@ -1058,18 +1112,18 @@
       "mile_distance": 0.2,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "lock-67",
-      "to_mile": 161.7,
-      "to_name": "Lock 67"
+      "to_id": "campground-town-creek-162-1",
+      "to_mile": 162.1,
+      "to_name": "Town Creek"
     },
     {
       "from_id": "access-lock-67-161-9",
       "mile_distance": 0.2,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-town-creek-162-1",
-      "to_mile": 162.1,
-      "to_name": "Town Creek"
+      "to_id": "lock-67",
+      "to_mile": 161.7,
+      "to_name": "Lock 67"
     },
     {
       "from_id": "access-lock-67-161-9",
@@ -1078,6 +1132,15 @@
       "source_id": null,
       "to_id": "access-town-creek-aqueduct-162-3",
       "to_mile": 162.3,
+      "to_name": "Town Creek Aqueduct"
+    },
+    {
+      "from_id": "access-lock-67-161-9",
+      "mile_distance": 0.5,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-town-creek-aqueduct-162-4",
+      "to_mile": 162.4,
       "to_name": "Town Creek Aqueduct"
     },
     {
@@ -1199,11 +1262,11 @@
     },
     {
       "from_id": "access-marsden-tract-11-4",
-      "mile_distance": 0.1,
+      "mile_distance": 0.4,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-marsden-tract-11-5",
-      "to_mile": 11.5,
+      "to_id": "campground-marsden-tract-11-0",
+      "to_mile": 11.0,
       "to_name": "Marsden Tract"
     },
     {
@@ -1271,15 +1334,6 @@
     },
     {
       "from_id": "access-maryland-heights-61-3",
-      "mile_distance": 0.7,
-      "relationship_type": "nearby",
-      "source_id": null,
-      "to_id": "nps-huckleberry-hill-62-0",
-      "to_mile": 62.0,
-      "to_name": "Huckleberry Hill"
-    },
-    {
-      "from_id": "access-maryland-heights-61-3",
       "mile_distance": 1.0,
       "relationship_type": "nearby",
       "source_id": null,
@@ -1292,7 +1346,7 @@
       "mile_distance": 0.0,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-mccoys-ferry-110-4",
+      "to_id": "campground-mccoys-ferry-110-4",
       "to_mile": 110.4,
       "to_name": "McCoys Ferry"
     },
@@ -1301,7 +1355,7 @@
       "mile_distance": 0.4,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-north-mountain-110-0",
+      "to_id": "campground-north-mountain-110-0",
       "to_mile": 110.0,
       "to_name": "North Mountain"
     },
@@ -1355,7 +1409,7 @@
       "mile_distance": 0.1,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-monocacy-aqueduct-42-2",
+      "to_id": "aqueduct-monocacy-aqueduct-42-2",
       "to_mile": 42.2,
       "to_name": "Monocacy Aqueduct"
     },
@@ -1364,7 +1418,7 @@
       "mile_distance": 0.4,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-indian-flats-42-5",
+      "to_id": "campground-indian-flats-42-5",
       "to_mile": 42.5,
       "to_name": "Indian Flats"
     },
@@ -1427,7 +1481,7 @@
       "mile_distance": 0.3,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-irons-mountain-175-3",
+      "to_id": "campground-irons-mountain-175-3",
       "to_mile": 175.3,
       "to_name": "Irons Mountain"
     },
@@ -1448,15 +1502,6 @@
       "to_id": "nps-anglers-access-12-2",
       "to_mile": 12.2,
       "to_name": "Anglers Access"
-    },
-    {
-      "from_id": "access-old-angler-s-inn-12-2",
-      "mile_distance": 0.7,
-      "relationship_type": "nearby",
-      "source_id": null,
-      "to_id": "nps-marsden-tract-11-5",
-      "to_mile": 11.5,
-      "to_name": "Marsden Tract"
     },
     {
       "from_id": "access-old-angler-s-inn-12-2",
@@ -1505,11 +1550,11 @@
     },
     {
       "from_id": "access-paw-paw-tunnel-156-2",
-      "mile_distance": 0.1,
+      "mile_distance": 0.0,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-paw-paw-156-1",
-      "to_mile": 156.1,
+      "to_id": "campground-paw-paw-156-2",
+      "to_mile": 156.2,
       "to_name": "Paw Paw"
     },
     {
@@ -1517,7 +1562,7 @@
       "mile_distance": 0.7,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-purslane-run-156-9",
+      "to_id": "campground-purslane-run-156-9",
       "to_mile": 156.9,
       "to_name": "Purslane Run"
     },
@@ -1544,9 +1589,9 @@
       "mile_distance": 0.4,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-cacapon-juntion-133-6",
+      "to_id": "campground-cacapon-junction-133-6",
       "to_mile": 133.6,
-      "to_name": "Cacapon Juntion"
+      "to_name": "Cacapon Junction"
     },
     {
       "from_id": "access-pennyfield-lock-19-6",
@@ -1571,7 +1616,7 @@
       "mile_distance": 0.6,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-calico-rocks-47-6",
+      "to_id": "campground-calico-rocks-47-6",
       "to_mile": 47.6,
       "to_name": "Calico Rocks"
     },
@@ -1628,6 +1673,15 @@
       "to_id": "nps-seneca-rileys-lock-22-8",
       "to_mile": 22.8,
       "to_name": "Seneca (Rileys Lock)"
+    },
+    {
+      "from_id": "access-rileys-lock-22-8",
+      "mile_distance": 0.1,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-seneca-aqueduct-22-7",
+      "to_mile": 22.7,
+      "to_name": "Seneca Aqueduct"
     },
     {
       "from_id": "access-rileys-lock-22-8",
@@ -1805,9 +1859,18 @@
       "mile_distance": 0.0,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-spring-gap-173-3",
+      "to_id": "campground-spring-gap-173-3",
       "to_mile": 173.3,
       "to_name": "Spring Gap"
+    },
+    {
+      "from_id": "access-swains-lock-16-6",
+      "mile_distance": 0.0,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "campground-swains-lock-16-6",
+      "to_mile": 16.6,
+      "to_name": "Swains Lock"
     },
     {
       "from_id": "access-swains-lock-16-6",
@@ -1901,10 +1964,19 @@
     },
     {
       "from_id": "access-town-creek-aqueduct-162-3",
+      "mile_distance": 0.1,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-town-creek-aqueduct-162-4",
+      "to_mile": 162.4,
+      "to_name": "Town Creek Aqueduct"
+    },
+    {
+      "from_id": "access-town-creek-aqueduct-162-3",
       "mile_distance": 0.2,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-town-creek-162-1",
+      "to_id": "campground-town-creek-162-1",
       "to_mile": 162.1,
       "to_name": "Town Creek"
     },
@@ -1940,18 +2012,18 @@
       "mile_distance": 0.8,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "lock-62",
+      "to_id": "campground-sorrel-ridge-154-1",
       "to_mile": 154.1,
-      "to_name": "Lock 62"
+      "to_name": "Sorrel Ridge"
     },
     {
       "from_id": "access-twigg-hollow-153-3",
       "mile_distance": 0.8,
       "relationship_type": "nearby",
       "source_id": null,
-      "to_id": "nps-sorrel-ridge-154-1",
+      "to_id": "lock-62",
       "to_mile": 154.1,
-      "to_name": "Sorrel Ridge"
+      "to_name": "Lock 62"
     },
     {
       "from_id": "access-valley-road-brookmont-5-4",
@@ -2015,6 +2087,15 @@
       "to_id": "lock-23",
       "to_mile": 22.1,
       "to_name": "Lock 23"
+    },
+    {
+      "from_id": "access-violettes-lock-22-1",
+      "mile_distance": 0.6,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-seneca-aqueduct-22-7",
+      "to_mile": 22.7,
+      "to_name": "Seneca Aqueduct"
     },
     {
       "from_id": "access-violettes-lock-22-1",
@@ -2135,6 +2216,15 @@
     },
     {
       "from_id": "access-williamsport-visitor-center-99-8",
+      "mile_distance": 0.2,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-conococheague-aqueduct-99-6",
+      "to_mile": 99.6,
+      "to_name": "Conococheague Aqueduct"
+    },
+    {
+      "from_id": "access-williamsport-visitor-center-99-8",
       "mile_distance": 0.5,
       "relationship_type": "nearby",
       "source_id": null,
@@ -2170,11 +2260,20 @@
       "to_name": "Lock 56"
     },
     {
+      "from_id": "access-wmrt-pearre-parking-lot-135-9",
+      "mile_distance": 0.7,
+      "relationship_type": "nearby",
+      "source_id": null,
+      "to_id": "aqueduct-sideling-hill-creek-aqueduct-136-6",
+      "to_mile": 136.6,
+      "to_name": "Sideling Hill Creek Aqueduct"
+    },
+    {
       "from_id": "access-antietam-69-5",
       "mile_distance": 0.1,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-antietam-creek-69-6",
+      "to_id": "campground-antietam-creek-69-7",
       "to_mile": 69.6,
       "to_name": "Antietam Creek"
     },
@@ -2318,7 +2417,7 @@
       "mile_distance": 0.3,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-licking-creek-116-0",
+      "to_id": "campground-licking-creek-116-0",
       "to_mile": 116.0,
       "to_name": "Licking Creek"
     },
@@ -2381,7 +2480,7 @@
       "mile_distance": 0.1,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-marsden-tract-11-5",
+      "to_id": "campground-marsden-tract-11-0",
       "to_mile": 11.5,
       "to_name": "Marsden Tract"
     },
@@ -2390,7 +2489,7 @@
       "mile_distance": 0.0,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-mccoys-ferry-110-4",
+      "to_id": "campground-mccoys-ferry-110-4",
       "to_mile": 110.4,
       "to_name": "McCoys Ferry"
     },
@@ -2408,7 +2507,7 @@
       "mile_distance": 0.1,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-monocacy-aqueduct-42-2",
+      "to_id": "aqueduct-monocacy-aqueduct-42-2",
       "to_mile": 42.2,
       "to_name": "Monocacy Aqueduct"
     },
@@ -2453,7 +2552,7 @@
       "mile_distance": 0.1,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-paw-paw-156-1",
+      "to_id": "campground-paw-paw-156-2",
       "to_mile": 156.1,
       "to_name": "Paw Paw"
     },
@@ -2498,7 +2597,7 @@
       "mile_distance": 0.0,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-spring-gap-173-3",
+      "to_id": "campground-spring-gap-173-3",
       "to_mile": 173.3,
       "to_name": "Spring Gap"
     },
@@ -2543,7 +2642,7 @@
       "mile_distance": 0.2,
       "relationship_type": "source_match",
       "source_id": "nps_recreation_guide",
-      "to_id": "nps-town-creek-162-1",
+      "to_id": "campground-town-creek-162-1",
       "to_mile": 162.1,
       "to_name": "Town Creek"
     },

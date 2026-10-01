@@ -1,6 +1,9 @@
 id,name,organization,url,description
 co_canal_association_access_points,C&O Canal Association,C&O Canal Association,https://candocanal.org/access/,"Access-point names, mile ranges, and coordinates."
+co_canal_trust_aqueducts,C&O Canal Trust Aqueduct Guide,C&O Canal Trust,https://www.canaltrust.org/plan/explore-your-canal/,Normalized aqueduct names and reference mileposts.
 co_canal_trust_locks,C&O Canal Trust,C&O Canal Trust,https://www.canaltrust.org/pyvactivities/locks/,Practical lift-lock mileposts and common names.
+nps_2026_superintendents_compendium,National Park Service 2026 Superintendent's Compendium,National Park Service,https://home.nps.gov/choh/learn/management/superintendent-s-compendium.htm,"Current official campground types and mileposts, approved 2026-09-10."
 nps_lift_locks,National Park Service Lift Locks,National Park Service,https://www.nps.gov/choh/learn/historyculture/lift-locks.htm,Authority for the lift-lock count and numbering.
 nps_recreation_guide,National Park Service C&O Canal Recreational Guide by Milepost,National Park Service,https://www.nps.gov/common/uploads/sortable_dataset/choh/E3324057-FAAC-0D9B-C75464422AFC4A4C/choh-CHOHRecreationalGuidebyMilepost.csv,Recreation locations and listed visitor amenities.
 nps_towpath_reference,National Park Service Public Trails dataset,National Park Service,https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_Trails_Geographic/FeatureServer/0,Underlying geometry for the canonical C&O Canal towpath.
+sabatke_aqueduct_table,Discovering the C&O Canal and the Adjacent Potomac River,Schreiber Publishing,https://books.google.com/books?id=JcDMGgAACAAJ,"Historical guidebook aqueduct dimensions and masonry details, transcribed from user-supplied page photographs."

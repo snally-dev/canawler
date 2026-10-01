@@ -1,0 +1,602 @@
+{
+  "campsites": [
+    {
+      "campground_types": [
+        "group"
+      ],
+      "group_mile": 11.0,
+      "id": "campground-marsden-tract-11-0",
+      "latitude": 38.977644,
+      "longitude": -77.212449,
+      "mile": 11.0,
+      "name": "Marsden Tract",
+      "reservation_required": true,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-swains-lock-16-6",
+      "latitude": 39.033317,
+      "longitude": -77.247584,
+      "mile": 16.6,
+      "name": "Swains Lock",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-horsepen-branch-26-1",
+      "latitude": 39.070955,
+      "longitude": -77.407783,
+      "mile": 26.1,
+      "name": "Horsepen Branch",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-chisel-branch-30-5",
+      "latitude": 39.103718,
+      "longitude": -77.47244,
+      "mile": 30.5,
+      "name": "Chisel Branch",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-turtle-run-34-4",
+      "latitude": 39.140468,
+      "longitude": -77.515859,
+      "mile": 34.4,
+      "name": "Turtle Run",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-marble-quarry-38-2",
+      "latitude": 39.181872,
+      "longitude": -77.485457,
+      "mile": 38.2,
+      "name": "Marble Quarry",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-indian-flats-42-5",
+      "latitude": 39.23083,
+      "longitude": -77.458139,
+      "mile": 42.5,
+      "name": "Indian Flats",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-calico-rocks-47-6",
+      "latitude": 39.27256,
+      "longitude": -77.533248,
+      "mile": 47.6,
+      "name": "Calico Rocks",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-bald-eagle-island-50-3",
+      "latitude": 39.301381,
+      "longitude": -77.556463,
+      "mile": 50.3,
+      "name": "Bald Eagle Island",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-huckleberry-hill-62-9",
+      "latitude": 39.344378,
+      "longitude": -77.754876,
+      "mile": 62.9,
+      "name": "Huckleberry Hill",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "group",
+        "walk_in"
+      ],
+      "group_mile": 69.7,
+      "id": "campground-antietam-creek-69-7",
+      "latitude": 39.422894,
+      "longitude": -77.750067,
+      "mile": 69.7,
+      "name": "Antietam Creek",
+      "reservation_required": true,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-killiansburg-cave-75-2",
+      "latitude": 39.459017,
+      "longitude": -77.796743,
+      "mile": 75.2,
+      "name": "Killiansburg Cave",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-horseshoe-bend-79-2",
+      "latitude": 39.485611,
+      "longitude": -77.780687,
+      "mile": 79.2,
+      "name": "Horseshoe Bend",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-big-woods-82-7",
+      "latitude": 39.491757,
+      "longitude": -77.797918,
+      "mile": 82.7,
+      "name": "Big Woods",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-opequon-junction-90-9",
+      "latitude": 39.516661,
+      "longitude": -77.862118,
+      "mile": 90.9,
+      "name": "Opequon Junction",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-cumberland-valley-95-2",
+      "latitude": 39.561766,
+      "longitude": -77.869969,
+      "mile": 95.2,
+      "name": "Cumberland Valley",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-jordan-junction-101-2",
+      "latitude": 39.609492,
+      "longitude": -77.85102,
+      "mile": 101.2,
+      "name": "Jordan Junction",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-north-mountain-110-0",
+      "latitude": 39.61052,
+      "longitude": -77.963543,
+      "mile": 110.0,
+      "name": "North Mountain",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "drive_in",
+        "group"
+      ],
+      "group_mile": 110.4,
+      "id": "campground-mccoys-ferry-110-4",
+      "latitude": 39.608148,
+      "longitude": -77.970382,
+      "mile": 110.4,
+      "name": "McCoys Ferry",
+      "reservation_required": true,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-licking-creek-116-0",
+      "latitude": 39.646154,
+      "longitude": -78.045378,
+      "mile": 116.0,
+      "name": "Licking Creek",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-little-pool-120-6",
+      "latitude": 39.684735,
+      "longitude": -78.112274,
+      "mile": 120.6,
+      "name": "Little Pool",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-white-rock-126-4",
+      "latitude": 39.678539,
+      "longitude": -78.206563,
+      "mile": 126.4,
+      "name": "White Rock",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-leopards-mill-129-9",
+      "latitude": 39.653048,
+      "longitude": -78.238459,
+      "mile": 129.9,
+      "name": "Leopards Mill",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-cacapon-junction-133-6",
+      "latitude": 39.621978,
+      "longitude": -78.282096,
+      "mile": 133.6,
+      "name": "Cacapon Junction",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-indigo-neck-139-2",
+      "latitude": 39.627074,
+      "longitude": -78.359089,
+      "mile": 139.2,
+      "name": "Indigo Neck",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "drive_in",
+        "group"
+      ],
+      "group_mile": 141.0,
+      "id": "campground-fifteenmile-creek-140-9",
+      "latitude": 39.625693,
+      "longitude": -78.386301,
+      "mile": 140.9,
+      "name": "Fifteenmile Creek",
+      "reservation_required": true,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-devils-alley-144-5",
+      "latitude": 39.62283,
+      "longitude": -78.413478,
+      "mile": 144.5,
+      "name": "Devils Alley",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-stickpile-hill-149-4",
+      "latitude": 39.582727,
+      "longitude": -78.399293,
+      "mile": 149.4,
+      "name": "Stickpile Hill",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-sorrel-ridge-154-1",
+      "latitude": 39.570954,
+      "longitude": -78.452925,
+      "mile": 154.1,
+      "name": "Sorrel Ridge",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "group",
+        "walk_in"
+      ],
+      "group_mile": 156.2,
+      "id": "campground-paw-paw-156-2",
+      "latitude": 39.544185,
+      "longitude": -78.46168,
+      "mile": 156.2,
+      "name": "Paw Paw",
+      "reservation_required": true,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-purslane-run-156-9",
+      "latitude": 39.535606,
+      "longitude": -78.46445,
+      "mile": 156.9,
+      "name": "Purslane Run",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-town-creek-162-1",
+      "latitude": 39.524299,
+      "longitude": -78.540338,
+      "mile": 162.1,
+      "name": "Town Creek",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-potomac-forks-164-8",
+      "latitude": 39.530476,
+      "longitude": -78.588689,
+      "mile": 164.8,
+      "name": "Potomac Forks",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-pigmans-ferry-169-1",
+      "latitude": 39.539143,
+      "longitude": -78.650873,
+      "mile": 169.1,
+      "name": "Pigmans Ferry",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "drive_in",
+        "group"
+      ],
+      "group_mile": 173.3,
+      "id": "campground-spring-gap-173-3",
+      "latitude": 39.56461,
+      "longitude": -78.719211,
+      "mile": 173.3,
+      "name": "Spring Gap",
+      "reservation_required": true,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-irons-mountain-175-3",
+      "latitude": 39.587859,
+      "longitude": -78.734986,
+      "mile": 175.3,
+      "name": "Irons Mountain",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    },
+    {
+      "campground_types": [
+        "hiker_biker"
+      ],
+      "group_mile": null,
+      "id": "campground-evitts-creek-180-1",
+      "latitude": 39.619127,
+      "longitude": -78.733404,
+      "mile": 180.1,
+      "name": "Evitts Creek",
+      "reservation_required": false,
+      "source_ids": [
+        "nps_2026_superintendents_compendium",
+        "nps_towpath_reference"
+      ]
+    }
+  ],
+  "schema_version": 1
+}

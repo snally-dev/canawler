@@ -1,0 +1,203 @@
+{
+  "aqueducts": [
+    {
+      "arch_lengths": "33' each",
+      "arches": 3,
+      "guidebook_span_ft": 113,
+      "id": "aqueduct-seneca-aqueduct-22-7",
+      "latitude": 39.068409,
+      "longitude": -77.34474,
+      "masonry_description": "Cut stone",
+      "mile": 22.7,
+      "name": "Seneca Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Sandstone",
+      "waterway": "Seneca Creek"
+    },
+    {
+      "arch_lengths": "54' each",
+      "arches": 7,
+      "guidebook_span_ft": 433,
+      "id": "aqueduct-monocacy-aqueduct-42-2",
+      "latitude": 39.227429,
+      "longitude": -77.45473,
+      "masonry_description": "Cut stone",
+      "mile": 42.2,
+      "name": "Monocacy Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Quartzite",
+      "waterway": "Monocacy River"
+    },
+    {
+      "arch_lengths": "20', 40', 20'",
+      "arches": 3,
+      "guidebook_span_ft": 92,
+      "id": "aqueduct-catoctin-aqueduct-51-5",
+      "latitude": 39.310898,
+      "longitude": -77.571695,
+      "masonry_description": "Ranged rubble below, cut face rough above piers.",
+      "mile": 51.5,
+      "name": "Catoctin Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Mostly granite",
+      "waterway": "Catoctin Creek"
+    },
+    {
+      "arch_lengths": "28', 40', 28'",
+      "arches": 3,
+      "guidebook_span_ft": 103,
+      "id": "aqueduct-antietam-aqueduct-69-4",
+      "latitude": 39.419226,
+      "longitude": -77.747129,
+      "masonry_description": null,
+      "mile": 69.4,
+      "name": "Antietam Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Limestone",
+      "waterway": "Antietam Creek"
+    },
+    {
+      "arch_lengths": "60' each",
+      "arches": 3,
+      "guidebook_span_ft": 196,
+      "id": "aqueduct-conococheague-aqueduct-99-6",
+      "latitude": 39.599633,
+      "longitude": -77.826794,
+      "masonry_description": "Arches, skewbacks, ends of piers and abutments cut; remaining facelines hammer-dressed and ranged.",
+      "mile": 99.6,
+      "name": "Conococheague Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Limestone",
+      "waterway": "Conococheague Creek"
+    },
+    {
+      "arch_lengths": "90'",
+      "arches": 1,
+      "guidebook_span_ft": 90,
+      "id": "aqueduct-licking-creek-aqueduct-116-1",
+      "latitude": 39.647208,
+      "longitude": -78.046654,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "mile": 116.1,
+      "name": "Licking Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Limestone",
+      "waterway": "Licking Creek"
+    },
+    {
+      "arch_lengths": "66'",
+      "arches": 1,
+      "guidebook_span_ft": 66,
+      "id": "aqueduct-tonoloway-aqueduct-123-0",
+      "latitude": 39.693749,
+      "longitude": -78.155571,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "mile": 123.0,
+      "name": "Tonoloway Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Limestone",
+      "waterway": "Tonoloway Creek"
+    },
+    {
+      "arch_lengths": "66'",
+      "arches": 1,
+      "guidebook_span_ft": 66,
+      "id": "aqueduct-sideling-hill-creek-aqueduct-136-6",
+      "latitude": 39.639332,
+      "longitude": -78.333423,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "mile": 136.6,
+      "name": "Sideling Hill Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Sandstone",
+      "waterway": "Sideling Hill Creek"
+    },
+    {
+      "arch_lengths": "50'",
+      "arches": 1,
+      "guidebook_span_ft": 50,
+      "id": "aqueduct-fifteenmile-creek-aqueduct-140-9",
+      "latitude": 39.625693,
+      "longitude": -78.386301,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "mile": 140.9,
+      "name": "Fifteenmile Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Very hard sandstone",
+      "waterway": "Fifteenmile Creek"
+    },
+    {
+      "arch_lengths": "60'",
+      "arches": 1,
+      "guidebook_span_ft": 60,
+      "id": "aqueduct-town-creek-aqueduct-162-4",
+      "latitude": 39.523075,
+      "longitude": -78.545697,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "mile": 162.4,
+      "name": "Town Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Limestone",
+      "waterway": "Town Creek"
+    },
+    {
+      "arch_lengths": "70'",
+      "arches": 1,
+      "guidebook_span_ft": 70,
+      "id": "aqueduct-evitts-creek-aqueduct-180-7",
+      "latitude": 39.625214,
+      "longitude": -78.7406,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "mile": 180.7,
+      "name": "Evitts Creek Aqueduct",
+      "source_ids": [
+        "sabatke_aqueduct_table",
+        "co_canal_trust_aqueducts",
+        "nps_towpath_reference"
+      ],
+      "stone": "Limestone",
+      "waterway": "Evitts Creek"
+    }
+  ],
+  "schema_version": 1
+}

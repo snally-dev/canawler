@@ -1,0 +1,128 @@
+{
+  "aqueducts": [
+    {
+      "arch_lengths": "33' each",
+      "arches": 3,
+      "guidebook_span_ft": 113,
+      "masonry_description": "Cut stone",
+      "milepost": 22.7,
+      "name": "Seneca Aqueduct",
+      "stone": "Sandstone",
+      "waterway": "Seneca Creek"
+    },
+    {
+      "arch_lengths": "54' each",
+      "arches": 7,
+      "guidebook_span_ft": 433,
+      "masonry_description": "Cut stone",
+      "milepost": 42.2,
+      "name": "Monocacy Aqueduct",
+      "stone": "Quartzite",
+      "waterway": "Monocacy River"
+    },
+    {
+      "arch_lengths": "20', 40', 20'",
+      "arches": 3,
+      "guidebook_span_ft": 92,
+      "masonry_description": "Ranged rubble below, cut face rough above piers.",
+      "milepost": 51.5,
+      "name": "Catoctin Aqueduct",
+      "stone": "Mostly granite",
+      "waterway": "Catoctin Creek"
+    },
+    {
+      "arch_lengths": "28', 40', 28'",
+      "arches": 3,
+      "guidebook_span_ft": 103,
+      "masonry_description": null,
+      "milepost": 69.4,
+      "name": "Antietam Aqueduct",
+      "stone": "Limestone",
+      "waterway": "Antietam Creek"
+    },
+    {
+      "arch_lengths": "60' each",
+      "arches": 3,
+      "guidebook_span_ft": 196,
+      "masonry_description": "Arches, skewbacks, ends of piers and abutments cut; remaining facelines hammer-dressed and ranged.",
+      "milepost": 99.6,
+      "name": "Conococheague Aqueduct",
+      "stone": "Limestone",
+      "waterway": "Conococheague Creek"
+    },
+    {
+      "arch_lengths": "90'",
+      "arches": 1,
+      "guidebook_span_ft": 90,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "milepost": 116.1,
+      "name": "Licking Creek Aqueduct",
+      "stone": "Limestone",
+      "waterway": "Licking Creek"
+    },
+    {
+      "arch_lengths": "66'",
+      "arches": 1,
+      "guidebook_span_ft": 66,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "milepost": 123.0,
+      "name": "Tonoloway Aqueduct",
+      "stone": "Limestone",
+      "waterway": "Tonoloway Creek"
+    },
+    {
+      "arch_lengths": "66'",
+      "arches": 1,
+      "guidebook_span_ft": 66,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "milepost": 136.6,
+      "name": "Sideling Hill Creek Aqueduct",
+      "stone": "Sandstone",
+      "waterway": "Sideling Hill Creek"
+    },
+    {
+      "arch_lengths": "50'",
+      "arches": 1,
+      "guidebook_span_ft": 50,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "milepost": 140.9,
+      "name": "Fifteenmile Creek Aqueduct",
+      "stone": "Very hard sandstone",
+      "waterway": "Fifteenmile Creek"
+    },
+    {
+      "arch_lengths": "60'",
+      "arches": 1,
+      "guidebook_span_ft": 60,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "milepost": 162.4,
+      "name": "Town Creek Aqueduct",
+      "stone": "Limestone",
+      "waterway": "Town Creek"
+    },
+    {
+      "arch_lengths": "70'",
+      "arches": 1,
+      "guidebook_span_ft": 70,
+      "masonry_description": "Arches, skewbacks, water table, coping, and inside of parapet are cut; remaining masonry is rubble work.",
+      "milepost": 180.7,
+      "name": "Evitts Creek Aqueduct",
+      "stone": "Limestone",
+      "waterway": "Evitts Creek"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Discovering the C&O Canal and the Adjacent Potomac River",
+      "note": "Aqueduct table transcribed from user-supplied page photographs on 2026-09-30. The guidebook's span values are preserved as source-specific measurements.",
+      "role": "Historical aqueduct construction table",
+      "url": "https://books.google.com/books?id=JcDMGgAACAAJ"
+    },
+    {
+      "name": "C&O Canal Trust Aqueduct Guide",
+      "note": "Normalized aqueduct names and current reference mileposts.",
+      "role": "Aqueduct names and mileposts",
+      "url": "https://www.canaltrust.org/plan/explore-your-canal/"
+    }
+  ]
+}
