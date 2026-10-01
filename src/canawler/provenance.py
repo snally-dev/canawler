@@ -21,6 +21,9 @@ from canawler.dataset import (
 )
 from canawler.reference import FEATURESERVER_URL, ReferenceDataError
 
+SOURCE_SCHEMA_VERSION = 2
+SOURCE_CHECKED_AT = "2026-10-01"
+
 
 def build_sources() -> dict[str, Any]:
     access = load_access_points()["source"]
@@ -53,6 +56,9 @@ def build_sources() -> dict[str, Any]:
                 "organization": "C&O Canal Trust",
                 "url": trust_aqueducts["url"],
                 "description": "Normalized aqueduct names and reference mileposts.",
+                "published_at": None,
+                "retrieved_at": None,
+                "checked_at": SOURCE_CHECKED_AT,
             },
             {
                 "id": AQUEDUCT_SOURCE_ID,
@@ -63,6 +69,9 @@ def build_sources() -> dict[str, Any]:
                     "Historical guidebook aqueduct dimensions and masonry details, "
                     "transcribed from user-supplied page photographs."
                 ),
+                "published_at": None,
+                "retrieved_at": "2026-09-30",
+                "checked_at": SOURCE_CHECKED_AT,
             },
             {
                 "id": CAMPSITE_SOURCE_ID,
@@ -73,6 +82,9 @@ def build_sources() -> dict[str, Any]:
                     "Current official campground types and mileposts, approved "
                     f"{campsite['approved']}."
                 ),
+                "published_at": campsite["approved"],
+                "retrieved_at": None,
+                "checked_at": SOURCE_CHECKED_AT,
             },
             {
                 "id": ACCESS_SOURCE_ID,
@@ -80,6 +92,9 @@ def build_sources() -> dict[str, Any]:
                 "organization": "C&O Canal Association",
                 "url": access["url"],
                 "description": "Access-point names, mile ranges, and coordinates.",
+                "published_at": None,
+                "retrieved_at": None,
+                "checked_at": SOURCE_CHECKED_AT,
             },
             {
                 "id": RECREATION_SOURCE_ID,
@@ -87,6 +102,9 @@ def build_sources() -> dict[str, Any]:
                 "organization": "National Park Service",
                 "url": recreation["url"],
                 "description": "Recreation locations and listed visitor amenities.",
+                "published_at": None,
+                "retrieved_at": None,
+                "checked_at": SOURCE_CHECKED_AT,
             },
             {
                 "id": NPS_LOCK_SOURCE_ID,
@@ -94,6 +112,9 @@ def build_sources() -> dict[str, Any]:
                 "organization": "National Park Service",
                 "url": nps_locks["url"],
                 "description": "Authority for the lift-lock count and numbering.",
+                "published_at": None,
+                "retrieved_at": None,
+                "checked_at": SOURCE_CHECKED_AT,
             },
             {
                 "id": TRUST_LOCK_SOURCE_ID,
@@ -101,6 +122,9 @@ def build_sources() -> dict[str, Any]:
                 "organization": "C&O Canal Trust",
                 "url": trust_locks["url"],
                 "description": "Practical lift-lock mileposts and common names.",
+                "published_at": None,
+                "retrieved_at": None,
+                "checked_at": SOURCE_CHECKED_AT,
             },
             {
                 "id": TOWPATH_SOURCE_ID,
@@ -110,6 +134,9 @@ def build_sources() -> dict[str, Any]:
                 "description": (
                     "Underlying geometry for the canonical C&O Canal towpath."
                 ),
+                "published_at": None,
+                "retrieved_at": "2026-08-31",
+                "checked_at": SOURCE_CHECKED_AT,
             },
         ],
         key=lambda source: source["id"],
@@ -143,7 +170,11 @@ def build_sources() -> dict[str, Any]:
         ],
         "towpath.geojson": [TOWPATH_SOURCE_ID],
     }
-    return {"schema_version": 1, "sources": sources, "artifacts": artifacts}
+    return {
+        "schema_version": SOURCE_SCHEMA_VERSION,
+        "sources": sources,
+        "artifacts": artifacts,
+    }
 
 
 __all__ = ["build_sources"]

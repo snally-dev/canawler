@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from datetime import date
 from typing import Any
 
 from canawler.dataset import CANAL_MILES
@@ -51,6 +52,19 @@ def _feature_fields(record: dict[str, Any], label: str) -> None:
 def validate_public_records(records: dict[str, Any], sources: dict[str, Any]) -> None:
     """Fail if referential, geographic, ordering, or uniqueness invariants fail."""
     source_ids = _unique_ids(sources["sources"], "sources", url_safe=False)
+    for source in sources["sources"]:
+        for field in ("published_at", "retrieved_at", "checked_at"):
+            value = source.get(field)
+            if value is None:
+                continue
+            if not isinstance(value, str):
+                raise ReferenceDataError(f"source {source['id']}: {field} is invalid")
+            try:
+                date.fromisoformat(value)
+            except ValueError as error:
+                raise ReferenceDataError(
+                    f"source {source['id']}: {field} is invalid"
+                ) from error
     feature_ids = _unique_ids(records["features"], "features")
     access_ids = _unique_ids(records["access_points"], "access points")
     aqueduct_ids = _unique_ids(records["aqueducts"], "aqueducts")

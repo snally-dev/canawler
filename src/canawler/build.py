@@ -91,7 +91,16 @@ RELATIONSHIP_COLUMNS = (
     "mile_distance",
     "source_id",
 )
-SOURCE_COLUMNS = ("id", "name", "organization", "url", "description")
+SOURCE_COLUMNS = (
+    "id",
+    "name",
+    "organization",
+    "url",
+    "description",
+    "published_at",
+    "retrieved_at",
+    "checked_at",
+)
 
 
 @dataclass(frozen=True)

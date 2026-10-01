@@ -151,6 +151,28 @@ def test_source_match_relationships_are_source_aware() -> None:
     assert all(item["to_name"] and item["to_mile"] is not None for item in matches)
 
 
+def test_source_registry_records_freshness_metadata() -> None:
+    sources = build_sources()
+    by_id = {source["id"]: source for source in sources["sources"]}
+
+    assert sources["schema_version"] == 2
+    assert all(source["checked_at"] == "2026-10-01" for source in by_id.values())
+    assert (
+        by_id["nps_2026_superintendents_compendium"]["published_at"]
+        == "2026-09-10"
+    )
+    assert by_id["nps_towpath_reference"]["retrieved_at"] == "2026-08-31"
+
+
+def test_validation_rejects_invalid_source_dates() -> None:
+    records = build_records(validate_canonical_reference())
+    sources = build_sources()
+    sources["sources"][0]["checked_at"] = "2026-13-01"
+
+    with pytest.raises(ReferenceDataError, match="checked_at is invalid"):
+        validate_public_records(records, sources)
+
+
 def test_corridor_specific_features_are_in_the_common_index() -> None:
     records = build_records(validate_canonical_reference())
     types = {record["feature_type"] for record in records["features"]}
