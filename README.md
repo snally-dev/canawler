@@ -23,7 +23,7 @@ Stable outputs live in [`data/public/`](data/public/):
 | `campsites` | Current NPS campground types, reservation status, mileposts, and coordinates |
 | `locks` | Lift-lock numbers, names, mileposts, and towpath-derived coordinates |
 | `relationships` | Access-point proximity links and explicit reference-source matches |
-| `sources` | Source registry and artifact-to-source provenance |
+| `sources` | Source registry, freshness dates, and artifact-to-source provenance |
 | `towpath.geojson` | Canonical Georgetown-to-Cumberland route geometry |
 
 CSV is intended for analysis. JSON preserves lists and structured amenity data.
@@ -43,6 +43,16 @@ numbers were not promoted because they are historical and conflict with current
 NPS guidance. Machine-readable URLs and artifact relationships are in
 [`sources.json`](data/public/json/sources.json); towpath acquisition details are
 documented beside the [canonical geometry](data/reference/co-towpath/README.md).
+The registry distinguishes a source's publication date, the date a committed
+artifact was retrieved, and the most recent live URL check.
+
+## Licensing
+
+Canawler's original software, documentation, and generated dataset files are
+offered under the [MIT License](LICENSE) to the extent the project holds rights
+to them. Upstream facts and source materials remain attributable to their
+providers; consult the source registry and linked source terms before
+redistributing source material.
 
 ## Build and test
 
