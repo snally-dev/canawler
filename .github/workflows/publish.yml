@@ -1,9 +1,13 @@
 name: Publish Quarto site
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build-deploy:
@@ -20,10 +24,14 @@ jobs:
           enable-cache: true
       - name: Verify public data is current
         run: |
-          uv sync --frozen --no-dev
-          uv run --frozen --no-dev python -m canawler.build
+          uv sync --frozen
+          uv run --frozen python -m canawler.build
           git diff --exit-code -- data/public
+          uv run --frozen pytest
+          uv run --frozen ruff check .
       - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.9.38"
       - name: Render and publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
