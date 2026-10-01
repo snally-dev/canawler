@@ -4,8 +4,9 @@
 
 Canawler is a reproducible, source-aware public dataset for exploring the
 184.5-mile Chesapeake & Ohio Canal corridor. It publishes a canonical feature
-index, access points and amenities, all 74 lift locks, nearby and source-match
-relationships, source metadata, and the towpath geometry.
+index, access points and amenities, all 74 lift locks, all 11 aqueducts, current
+official campgrounds, nearby and source-match relationships, source metadata,
+and the towpath geometry.
 
 Personal activity and completion tracking are intentionally out of scope. The
 core dataset builds without Strava data or network access.
@@ -18,6 +19,8 @@ Stable outputs live in [`data/public/`](data/public/):
 | --- | --- |
 | `features` | Small common index of access points, locks, and NPS recreation features |
 | `access-points` | Access locations, coordinates, mile ranges, and matched NPS amenities |
+| `aqueducts` | Aqueduct mileposts, coordinates, and guidebook construction details |
+| `campsites` | Current NPS campground types, reservation status, mileposts, and coordinates |
 | `locks` | Lift-lock numbers, names, mileposts, and towpath-derived coordinates |
 | `relationships` | Access-point proximity links and explicit reference-source matches |
 | `sources` | Source registry and artifact-to-source provenance |
@@ -32,9 +35,12 @@ preserving the NPS name and milepost used by the match.
 ## Sources
 
 Committed inputs in [`data/reference/`](data/reference/) come from the National
-Park Service Public Trails and recreation guide, the C&O Canal Association access
-guide, and the C&O Canal Trust lock collection. The NPS supplies lock count and
-numbering authority. Machine-readable URLs and artifact relationships are in
+Park Service Public Trails, recreation guide, and 2026 Superintendent's
+Compendium; the C&O Canal Association access guide; the C&O Canal Trust lock and
+aqueduct guides; and a photographed historical guidebook aqueduct table. The NPS
+supplies lock count and numbering authority. Guidebook services, fees, and phone
+numbers were not promoted because they are historical and conflict with current
+NPS guidance. Machine-readable URLs and artifact relationships are in
 [`sources.json`](data/public/json/sources.json); towpath acquisition details are
 documented beside the [canonical geometry](data/reference/co-towpath/README.md).
 

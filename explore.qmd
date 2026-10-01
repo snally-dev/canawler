@@ -31,6 +31,6 @@ Inputs.table(
 ```
 
 Coordinates for access points come from the C&O Canal Association reference.
-Coordinates for milepost-only locks and recreation features are derived from the
-canonical towpath geometry. They are suitable for exploration and analysis, not
-turn-by-turn navigation.
+Coordinates for milepost-only locks, aqueducts, campgrounds, and recreation
+features are derived from the canonical towpath geometry. They are suitable for
+exploration and analysis, not turn-by-turn navigation.

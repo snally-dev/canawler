@@ -9,6 +9,8 @@ subtitle: "Durable outputs for analysis and applications."
 | --- | --- | --- | --- |
 | Features | [CSV](data/public/csv/features.csv) | [JSON](data/public/json/features.json) | Common feature index and coordinates |
 | Access points | [CSV](data/public/csv/access-points.csv) | [JSON](data/public/json/access-points.json) | Mile ranges, coordinates, and amenities |
+| Aqueducts | [CSV](data/public/csv/aqueducts.csv) | [JSON](data/public/json/aqueducts.json) | Mileposts, coordinates, and construction details |
+| Campsites | [CSV](data/public/csv/campsites.csv) | [JSON](data/public/json/campsites.json) | Current NPS types, mileposts, and reservation status |
 | Locks | [CSV](data/public/csv/locks.csv) | [JSON](data/public/json/locks.json) | Numbers, names, mileposts, and coordinates |
 | Relationships | [CSV](data/public/csv/relationships.csv) | [JSON](data/public/json/relationships.json) | Nearby features and reference matches |
 | Sources | [CSV](data/public/csv/sources.csv) | [JSON](data/public/json/sources.json) | URLs, attribution, and artifact provenance |
