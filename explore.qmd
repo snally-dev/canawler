@@ -1,34 +1,52 @@
 ---
 title: "Explore"
 subtitle: "Features along the canal, ordered from Georgetown to Cumberland."
+description-meta: "Filter and browse normalized access points, locks, aqueducts, campgrounds, and other features along the C&O Canal."
 ---
 
+::: {.explore-table}
 ```{ojs}
 //| echo: false
 
 featureDocument = FileAttachment("data/public/json/features.json").json()
 featureTypes = ["all", ...Array.from(new Set(featureDocument.features.map(d => d.feature_type))).sort()]
+featureTypeLabel = value => value.replaceAll("_", " ").replace(/^./, letter => letter.toUpperCase())
 
-viewof selectedType = Inputs.select(featureTypes, {label: "Feature type", value: "all"})
+viewof selectedType = Inputs.select(featureTypes, {
+  label: "Feature type",
+  value: "all",
+  format: featureTypeLabel
+})
 
 visibleFeatures = featureDocument.features.filter(d => selectedType === "all" || d.feature_type === selectedType)
 
-Inputs.table(
-  visibleFeatures.map(d => ({
-    mile: d.mile_end == null ? d.mile : `${d.mile}–${d.mile_end}`,
-    name: d.name,
-    type: d.feature_type.replaceAll("_", " "),
-    latitude: d.latitude,
-    longitude: d.longitude
-  })),
-  {
-    columns: ["mile", "name", "type", "latitude", "longitude"],
-    header: {mile: "Mile", name: "Name", type: "Type", latitude: "Latitude", longitude: "Longitude"},
-    rows: 20,
-    sort: "mile"
-  }
-)
+featureTable = {
+  const table = Inputs.table(
+    visibleFeatures.map(d => ({
+      mile: d.mile_end == null ? d.mile : `${d.mile}–${d.mile_end}`,
+      name: d.name,
+      type: d.feature_type.replaceAll("_", " "),
+      latitude: d.latitude,
+      longitude: d.longitude
+    })),
+    {
+      columns: ["mile", "name", "type", "latitude", "longitude"],
+      header: {mile: "Mile", name: "Name", type: "Type", latitude: "Latitude", longitude: "Longitude"},
+      rows: 20,
+      sort: "mile"
+    }
+  );
+  table.setAttribute("aria-label", "Canal features; scroll horizontally for coordinates");
+  table.setAttribute("tabindex", "0");
+  return table;
+}
 ```
+:::
+
+<noscript>
+The interactive table requires JavaScript. Download the complete feature index as
+[CSV](data/public/csv/features.csv) or [JSON](data/public/json/features.json).
+</noscript>
 
 Coordinates for access points come from the C&O Canal Association reference.
 Coordinates for milepost-only locks, aqueducts, campgrounds, and recreation

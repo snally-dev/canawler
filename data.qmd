@@ -1,6 +1,7 @@
 ---
 title: "Data"
 subtitle: "Durable outputs for analysis and applications."
+description-meta: "Download Canawler's normalized C&O Canal datasets as CSV, JSON, and GeoJSON."
 ---
 
 ## Downloads
@@ -10,7 +11,7 @@ subtitle: "Durable outputs for analysis and applications."
 | Features | [CSV](data/public/csv/features.csv) | [JSON](data/public/json/features.json) | Common feature index and coordinates |
 | Access points | [CSV](data/public/csv/access-points.csv) | [JSON](data/public/json/access-points.json) | Mile ranges, coordinates, and amenities |
 | Aqueducts | [CSV](data/public/csv/aqueducts.csv) | [JSON](data/public/json/aqueducts.json) | Mileposts, coordinates, and construction details |
-| Campsites | [CSV](data/public/csv/campsites.csv) | [JSON](data/public/json/campsites.json) | Current NPS types, mileposts, and reservation status |
+| Campsites | [CSV](data/public/csv/campsites.csv) | [JSON](data/public/json/campsites.json) | NPS types, mileposts, and reservation status as of September 10, 2026 |
 | Locks | [CSV](data/public/csv/locks.csv) | [JSON](data/public/json/locks.json) | Numbers, names, mileposts, and coordinates |
 | Relationships | [CSV](data/public/csv/relationships.csv) | [JSON](data/public/json/relationships.json) | Nearby features and reference matches |
 | Sources | [CSV](data/public/csv/sources.csv) | [JSON](data/public/json/sources.json) | URLs, attribution, and artifact provenance |
@@ -23,6 +24,21 @@ retain details that do not belong in every feature record.
 `source_ids` joins to the source registry. In CSV, multiple IDs are separated with
 `|`; JSON retains them as arrays. Amenity fields are blank or `null` when an access
 point has no matched NPS recreation-guide record—unknown does not mean false.
+
+The source registry records the most recent URL check for every source, along with
+publication or retrieval dates when they are known. Campground designations come
+from the NPS Superintendent's Compendium approved September 10, 2026. Check current
+park conditions before travel.
+
+## Licensing
+
+Canawler's original software, documentation, and generated dataset files are
+offered under the repository's
+[MIT License](https://github.com/derailable/canawler/blob/main/LICENSE) to the
+extent the project holds rights to them. Upstream facts and source materials
+remain attributable to their providers; consult the
+[source registry](data/public/json/sources.json) and linked source terms before
+redistributing source material.
 
 ## Regenerate
 

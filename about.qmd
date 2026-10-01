@@ -1,5 +1,6 @@
 ---
 title: "About"
+description-meta: "How Canawler builds a reproducible, source-aware public dataset for the Chesapeake & Ohio Canal."
 ---
 
 Canawler is a public data project about the Chesapeake & Ohio Canal: its towpath,
@@ -14,10 +15,11 @@ The current reference inputs draw from:
 
 - the National Park Service Public Trails dataset for towpath geometry;
 - the NPS C&O Canal Recreational Guide by Milepost for places and amenities;
-- the 2026 NPS Superintendent's Compendium for current campground designations;
-- the C&O Canal Association access guide for practical access locations; and
+- the 2026 NPS Superintendent's Compendium, approved September 10, 2026, for
+  campground designations;
+- the C&O Canal Association access guide for practical access locations;
 - NPS and C&O Canal Trust lock references for numbering, mileposts, and names;
-- the C&O Canal Trust aqueduct guide for names and mileposts; and
+- the C&O Canal Trust aqueduct guide for names and mileposts;
 - a transcribed historical guidebook table for aqueduct construction details.
 
 Canawler performs normalization, deterministic ID assignment, reference matching,
@@ -26,3 +28,13 @@ are identified separately from source facts in the [source registry](data/public
 
 The data supports exploration and analysis. It is not a navigation product and
 should not be treated as current trail-condition guidance.
+
+## Licensing
+
+Canawler's original software, documentation, and generated dataset files are
+offered under the repository's
+[MIT License](https://github.com/derailable/canawler/blob/main/LICENSE) to the
+extent the project holds rights to them. Upstream facts and source materials
+remain attributable to their providers; the
+[source registry](data/public/json/sources.json) records those relationships and
+the latest source checks.
