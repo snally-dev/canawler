@@ -13,6 +13,10 @@ project:
 website:
   title: "Canawler"
   site-url: "https://canawler.com"
+  description: "A reproducible, source-aware public dataset for the Chesapeake & Ohio Canal corridor."
+  favicon: favicon.svg
+  open-graph: true
+  twitter-card: true
   navbar:
     left:
       - href: explore.qmd
@@ -32,3 +36,4 @@ format:
     css: styles.css
     toc: false
     code-copy: true
+    canonical-url: true
